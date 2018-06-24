@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">KRMU Student</string>
+    <string name="login_button">LOGIN</string>
+    <string name="sign_up_button">SIGN UP</string>
+    <string name="roll_no">ROLL NO.</string>
+    <string name="registered_mobile_number">REGISTERED MOBILE NUMBER</string>
+    <string name="send_otp">SEND OTP</string>
+    <string name="hi">Hi.</string>
+</resources>
