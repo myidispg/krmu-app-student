@@ -6,4 +6,18 @@
     <string name="registered_mobile_number">REGISTERED MOBILE NUMBER</string>
     <string name="send_otp">SEND OTP</string>
     <string name="hi">Hi.</string>
+    <string name="login_with_otp">login with OTP</string>
+    <string name="login_with_password">LOGIN with password</string>
+    <string name="otp_login">OTP LOGIN</string>
+    <string name="password_login">password login</string>
+    <string name="password">Password</string>
+    <string name="PASSWORD">PASSWORD</string>
+    <string name="welcome">Welcome</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_otp">ENTER OTP</string>
+    <string name="got_an_otp">Got an OTP?</string>
+    <string name="confirm">confirm</string>
+    <string name="password_question">Password?</string>
+    <string name="enter_new_password_caps">ENTER NEW PASSWORD</string>
+    <string name="confirm_password_caps">CONFIRM PASSWORD</string>
 </resources>

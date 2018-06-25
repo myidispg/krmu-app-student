@@ -4,22 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OTPGenerate"
+    tools:context=".LoginActivtiy"
     android:background="@drawable/splash_screen_gradient"
     >
-
     <TextView
-        android:text="@string/hi"
-        android:layout_above="@id/ll_otp_generate_roll_no"
+        android:text="@string/welcome"
+        android:textAllCaps="true"
+        android:layout_above="@id/ll_login_roll_no"
         style="@style/tv_white_big"
         />
-
     <LinearLayout
-        android:id="@+id/ll_otp_generate_roll_no"
+        android:id="@+id/ll_login_roll_no"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="20"
-        android:layout_above="@id/ll_create_password_reenter_pass"
+        android:layout_above="@id/ll_login_password"
         android:layout_marginBottom="20dp"
         android:elevation="12dp">
         <View
@@ -28,7 +27,7 @@
             android:layout_height="0dp" />
         <EditText
             android:layout_weight="18"
-            android:id="@+id/et_otp_generate_roll_no"
+            android:id="@+id/et_login_roll_no"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:elevation="4dp"
@@ -39,7 +38,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_create_password_reenter_pass"
+        android:id="@+id/ll_login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -52,26 +51,38 @@
             android:layout_height="0dp" />
         <EditText
             android:layout_weight="18"
-            android:id="@+id/et_otp_generate_mobile_number"
+            android:id="@+id/et_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:elevation="4dp"
-            android:hint="@string/registered_mobile_number"
+            android:hint="@string/PASSWORD"
             style="@style/et_information_fields"
-            android:inputType="phone"
+            android:inputType="textPassword"
             />
     </LinearLayout>
+    
+    <Button
+        android:id="@+id/btn_login_login"
+        style="@style/btn_everywhere"
+        android:text="@string/login_button"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ll_login_password"
+        android:layout_marginTop="20dp"
+        android:elevation="4dp"/>
 
-        <Button
-            android:id="@+id/btn_generate_otp_send"
-            android:text="@string/send_otp"
-            style="@style/btn_everywhere"
-            android:paddingLeft="26dp"
-            android:paddingRight="26dp"
-            android:elevation="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/ll_create_password_reenter_pass"
-            />
+    <TextView
+        android:id="@+id/tv_login_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lato_light"
+        android:text="@string/forgot_password"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_below="@id/btn_login_login"
+        android:layout_marginTop="10dp"
+        />
 
 </RelativeLayout>

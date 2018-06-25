@@ -29,11 +29,19 @@ public class SplashScreen extends AppCompatActivity {
         );
         setContentView(R.layout.activity_splash_screen);
 
-        Button loginButton = findViewById(R.id.btn_splash_login);
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        Button loginOTPButton = findViewById(R.id.btn_splash_login_otp);
+        loginOTPButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SplashScreen.this, OTPGenerate.class);
+                startActivity(intent);
+            }
+        });
+        Button loginPasswordButton = findViewById(R.id.btn_splash_login_password);
+        loginPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SplashScreen.this, LoginActivtiy.class);
                 startActivity(intent);
             }
         });

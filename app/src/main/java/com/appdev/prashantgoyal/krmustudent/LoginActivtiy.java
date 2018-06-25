@@ -1,15 +1,14 @@
 package com.appdev.prashantgoyal.krmustudent;
 
 import android.content.Intent;
-import android.graphics.Outline;
+import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewOutlineProvider;
 import android.view.WindowManager;
-import android.widget.Button;
+import android.widget.TextView;
 
-public class OTPGenerate extends AppCompatActivity {
+public class LoginActivtiy extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,16 +19,16 @@ public class OTPGenerate extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
-        setContentView(R.layout.activity_otpgenerate);
+        setContentView(R.layout.activity_login_activtiy);
 
-        Button sendOTPButton = findViewById(R.id.btn_generate_otp_send);
-        sendOTPButton.setOnClickListener(new View.OnClickListener() {
+        TextView forgotPasswordText = findViewById(R.id.tv_login_forgot_password);
+        forgotPasswordText.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+        forgotPasswordText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OTPGenerate.this, EnterOTP.class);
+                Intent intent = new Intent(LoginActivtiy.this, CreatePassword.class);
                 startActivity(intent);
             }
         });
-
     }
 }

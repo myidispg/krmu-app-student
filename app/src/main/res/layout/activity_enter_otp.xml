@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnterOTP"
+    android:background="@drawable/splash_screen_gradient"
+    >
+
+    <TextView
+        android:text="@string/got_an_otp"
+        android:layout_above="@id/ll_enter_otp_input"
+        style="@style/tv_white_big"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_enter_otp_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="20"
+        android:elevation="12dp">
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+        <EditText
+            android:layout_weight="18"
+            android:id="@+id/et_enter_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:hint="@string/enter_otp"
+            style="@style/et_information_fields"
+            android:inputType="number"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_enter_otp_confirm"
+        style="@style/btn_everywhere"
+        android:text="@string/confirm"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ll_enter_otp_input"
+        android:layout_marginTop="20dp"
+        android:elevation="4dp"/>
+
+</RelativeLayout>

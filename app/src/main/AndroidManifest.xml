@@ -21,7 +21,10 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".OTPGenerate"></activity>
+        <activity android:name=".OTPGenerate" />
+        <activity android:name=".LoginActivtiy" />
+        <activity android:name=".EnterOTP" />
+        <activity android:name=".CreatePassword"></activity>
     </application>
 
 </manifest>
