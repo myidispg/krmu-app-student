@@ -37,40 +37,20 @@
 
     <LinearLayout
         android:layout_weight="4"
-        android:weightSum="15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/splash_screen_gradient"
         android:orientation="horizontal"
+        android:gravity="center"
         >
-        <View
-            android:layout_weight="3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
 
         <Button
-            android:id="@+id/btn_splash_login_password"
+            android:id="@+id/btn_splash_lets_begin"
             android:layout_gravity="center_vertical"
-            android:layout_weight="4"
-            android:text="@string/password_login"
+            android:text="@string/lets_begin"
             style="@style/btn_everywhere"
+            android:gravity="center"
             />
-        <View
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
-        <Button
-            android:id="@+id/btn_splash_login_otp"
-            android:layout_weight="4"
-            android:layout_gravity="center_vertical"
-            android:text="@string/otp_login"
-            style="@style/btn_everywhere"
-
-            />
-        <View
-            android:layout_weight="3"
-            android:layout_width="0dp"
-            android:layout_height="match_parent" />
     </LinearLayout>
 
 </LinearLayout>

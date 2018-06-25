@@ -66,8 +66,6 @@
             android:id="@+id/btn_generate_otp_send"
             android:text="@string/send_otp"
             style="@style/btn_everywhere"
-            android:paddingLeft="26dp"
-            android:paddingRight="26dp"
             android:elevation="10dp"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"

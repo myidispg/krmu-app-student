@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="192dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="9.5"
+        android:orientation="horizontal">
+
+        <com.joooonho.SelectableRoundedImageView
+            android:id="@+id/image_profile_nav_bar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:sriv_oval="true"
+            android:src="@drawable/thor"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/tv_roll_nav_bar"
+            android:layout_toRightOf="@id/image_profile_nav_bar"
+            android:text="1601010012"
+            android:fontFamily="@font/lato_light"
+            style="@style/tv_nav_bar_header"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            />
+        <TextView
+            android:id="@+id/tv_course_nav_bar"
+            style="@style/tv_nav_bar_header"
+            android:layout_alignLeft="@id/tv_roll_nav_bar"
+            android:layout_below="@id/tv_roll_nav_bar"
+            android:layout_marginTop="6dp"
+            android:text="B.Tech"
+            />
+        <TextView
+            android:id="@+id/tv_discipline_nav_bar"
+            style="@style/tv_nav_bar_header"
+            android:layout_alignLeft="@id/tv_course_nav_bar"
+            android:layout_below="@id/tv_course_nav_bar"
+            android:layout_marginTop="6dp"
+            android:text="CSE"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_weight="0.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Prashant Goyal"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

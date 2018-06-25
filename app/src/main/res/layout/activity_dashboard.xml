@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:id="@+id/dashboard_drawer_layout"
+    >
+
+    <!-- Layout to contain contents of main body of screen (drawer will slide over this) -->
+    <LinearLayout
+        android:id="@+id/dashboard_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/dashboard_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#5680F8"
+            app:titleTextColor="@color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+
+        <LinearLayout
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <LinearLayout
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:weightSum="10"
+                >
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="match_parent" />
+                <com.joooonho.SelectableRoundedImageView
+                    android:layout_weight="5"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:src="@drawable/thor"
+                    android:scaleType="centerCrop"
+                    app:sriv_right_bottom_corner_radius="20dp"
+                    app:sriv_left_bottom_corner_radius="20dp"
+                    app:sriv_left_top_corner_radius="20dp"
+                    app:sriv_right_top_corner_radius="20dp"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="2.5"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                >
+
+            <!--<com.hookedonplay.decoviewlib.DecoView-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="match_parent" />-->
+
+                <com.txusballesteros.widgets.FitChart
+                    android:id="@+id/fc_dashboard_attendance"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    app:strokeSize="14dp"
+                    app:backStrokeColor="#FFE2E2E2"
+                    app:valueStrokeColor="#A3A1FB"
+                    app:animationMode="overdraw"
+                    />
+
+                <com.hookedonplay.decoviewlib.DecoView
+                    android:id="@+id/dv_login_CGPA"
+                    android:layout_weight="1"
+                    app:dv_lineWidth="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Container for contents of drawer - use NavigationView to make configuration easier -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/dashboard_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/drawer_view"
+        app:headerLayout="@layout/nav_header"/>
+
+
+</android.support.v4.widget.DrawerLayout>

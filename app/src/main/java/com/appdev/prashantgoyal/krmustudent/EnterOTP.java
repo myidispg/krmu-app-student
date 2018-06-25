@@ -12,7 +12,6 @@ public class EnterOTP extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide(); // to hide the toolbar
 
         // to make the status bar transparent
         getWindow().setFlags(
@@ -21,6 +20,13 @@ public class EnterOTP extends AppCompatActivity {
         );
         setContentView(R.layout.activity_enter_otp);
 
-        Button confirmOTPButton = findViewById(R.id.btn_enter_otp_confirm);
+        Button verifyOTPButton = findViewById(R.id.btn_enter_otp_verify);
+        verifyOTPButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EnterOTP.this, CreatePassword.class);
+                startActivity(intent);
+            }
+        });
     }
 }

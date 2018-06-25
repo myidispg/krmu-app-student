@@ -65,8 +65,6 @@
         android:id="@+id/btn_login_login"
         style="@style/btn_everywhere"
         android:text="@string/login_button"
-        android:paddingLeft="26dp"
-        android:paddingRight="26dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/ll_login_password"
         android:layout_marginTop="20dp"

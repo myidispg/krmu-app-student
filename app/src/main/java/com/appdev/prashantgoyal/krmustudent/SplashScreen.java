@@ -20,25 +20,15 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide(); // to hide the toolbar
-
         // to make the status bar transparent
         getWindow().setFlags(
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         );
         setContentView(R.layout.activity_splash_screen);
-
-        Button loginOTPButton = findViewById(R.id.btn_splash_login_otp);
-        loginOTPButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SplashScreen.this, OTPGenerate.class);
-                startActivity(intent);
-            }
-        });
-        Button loginPasswordButton = findViewById(R.id.btn_splash_login_password);
-        loginPasswordButton.setOnClickListener(new View.OnClickListener() {
+        
+        Button beginButton = findViewById(R.id.btn_splash_lets_begin);
+        beginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SplashScreen.this, LoginActivtiy.class);
